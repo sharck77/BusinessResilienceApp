@@ -3,6 +3,10 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  base: '/BusinessResilienceApp/', // <-- REPO NAME with trailing slash
+})
+
+export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
