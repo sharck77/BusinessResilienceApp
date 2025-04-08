@@ -1,0 +1,1 @@
+export function ScrollArea({ children }) { return <div className='scroll-area'>{children}</div>; }
