@@ -1,22 +1,14 @@
-// vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
+  base: '/BusinessResilienceApp/', // <-- REPO NAME with trailing slash
   plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  optimizeDeps: {
-    include: [
-      '@radix-ui/react-tabs',
-      'framer-motion',
-      '@radix-ui/react-presence',
-      '@radix-ui/react-roving-focus',
-      '@radix-ui/react-collection',
-    ],
-  },
-})
+});
